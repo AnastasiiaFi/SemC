@@ -87,7 +87,7 @@ double [] CreateRandomArray(int size)
     var random = new Random();
     for (int i = 0; i < size; i++)
     {
-        array[i] = random.NextDouble() + random.Next(0,99);
+        array[i] = Math.Round(random.NextDouble(), 3)+ random.Next(0,99);
     }
     return array;
 }
@@ -104,7 +104,7 @@ double Diff (double [] array)
         min = array[i];
         i++;
     }
-    return max - min;
+    return Math.Round(max - min, 2);
 }
 void PrintArray (double[] array)
 {
