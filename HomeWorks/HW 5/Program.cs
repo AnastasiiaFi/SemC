@@ -81,42 +81,42 @@
 // Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
-double [] CreateRandomArray(int size)
-{
-    double[] array = new double [size];
-    var random = new Random();
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = Math.Round(random.NextDouble(), 3)+ random.Next(0,99);
-    }
-    return array;
-}
-double Diff (double [] array)
-{
-    double min = array[0];
-    double max = array[0];
-    int i = 1;
-    while (i < array.Length)
-    {
-        if (max < array[i])
-        max = array[i];
-        if (min > array[i])
-        min = array[i];
-        i++;
-    }
-    return Math.Round(max - min, 2);
-}
-void PrintArray (double[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        System.Console.Write($"{array [i]}, ");
-    }
-    System.Console.Write(" ");
-}
-System.Console.WriteLine("Input array size: ");
-int size = Convert.ToInt32(Console.ReadLine());
-double [] myArray = CreateRandomArray(size);
-PrintArray (myArray);
-System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива: {Diff(myArray)}");
+// double [] CreateRandomArray(int size)
+// {
+//     double[] array = new double [size];
+//     var random = new Random();
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = Math.Round(random.NextDouble(), 3)+ random.Next(0,99);
+//     }
+//     return array;
+// }
+// double Diff (double [] array)
+// {
+//     double min = array[0];
+//     double max = array[0];
+//     int i = 1;
+//     while (i < array.Length)
+//     {
+//         if (max < array[i])
+//         max = array[i];
+//         if (min > array[i])
+//         min = array[i];
+//         i++;
+//     }
+//     return Math.Round(max - min, 2);
+// }
+// void PrintArray (double[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write($"{array [i]}, ");
+//     }
+//     System.Console.Write(" ");
+// }
+// System.Console.WriteLine("Input array size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// double [] myArray = CreateRandomArray(size);
+// PrintArray (myArray);
+// System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива: {Diff(myArray)}");
 
