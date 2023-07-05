@@ -105,7 +105,7 @@ int [,] MinValue ( int [,] array)
         {
             if (array [ i, j] <= minNum)
             {
-                minValue = array [i , j];
+                minNum = array [i , j];
                 minI = i;
                 minJ = j;
             }
