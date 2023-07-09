@@ -114,77 +114,76 @@
 // }
 
 
-// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
-int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
-{
-    int[,] array = new int[rows,columns];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            array[i, j] = new Random().Next(minValue, maxValue);
-        }
-    }
-    return array;
-}
+// int [,] Create2DArray (int rows, int columns, int minValue, int maxValue)
+// {
+//     int[,] array = new int[rows,columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             array[i, j] = new Random().Next(minValue, maxValue);
+//         }
+//     }
+//     return array;
+// }
 
-void Print2DArray(int[,] array) 
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            System.Console.Write(array[i, j] + " ");
-        }
-        System.Console.WriteLine();
-    }
-    System.Console.WriteLine();
-}
+// void Print2DArray(int[,] array) 
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             System.Console.Write(array[i, j] + " ");
+//         }
+//         System.Console.WriteLine();
+//     }
+//     System.Console.WriteLine();
+// }
 
 
-double[] FindAverageColumns(int columns, int [,] array)
-{
-    double[] resultArray = new double[columns];
+// double[] FindAverageColumns(int columns, int [,] array)
+// {
+//     double[] resultArray = new double[columns];
     
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
 
-        double sum = 0;
+//         double sum = 0;
         
-        for (int i = 0; i < array.GetLength(0); i++)
-        {
-            sum = sum + array[i,j];
-        }
-        resultArray[j] = Math.Round(sum / array.GetLength(0), 2);
-    }
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             sum = sum + array[i,j];
+//         }
+//         resultArray[j] = Math.Round(sum / array.GetLength(0), 2);
+//     }
 
-    return resultArray;
-}
+//     return resultArray;
+// }
 
-void PrintArray(double[] array) 
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-       System.Console.WriteLine($"Average of elements in a column {i + 1} = {array[i]}" + " ");
-    }
-    System.Console.WriteLine();
-}
+// void PrintArray(double[] array) 
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//        System.Console.WriteLine($"Average of elements in a column {i + 1} = {array[i]}" + " ");
+//     }
+//     System.Console.WriteLine();
+// }
 
-System.Console.WriteLine("Input number of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine("Input number of columns: ");
-int columns = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Input number of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine("Input array minimal value of array element: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Input array minimal value of array element: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
 
-System.Console.WriteLine("Input array maximal value of array element: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine();
+// System.Console.WriteLine("Input array maximal value of array element: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine();
 
-int[,] myArray = Create2DArray(rows, columns, minValue, maxValue);
-Print2DArray(myArray);
-PrintArray(FindAverageColumns(columns, myArray));
-
+// int[,] myArray = Create2DArray(rows, columns, minValue, maxValue);
+// Print2DArray(myArray);
+// PrintArray(FindAverageColumns(columns, myArray));
